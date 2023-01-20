@@ -23,7 +23,7 @@ const LoginPage = ({ componentsObject }) => {
             data-button-login="dashboard"
             onClick={manageComponents}
           >
-            Admin
+            Dashboard
           </button>
 
           <button
@@ -31,7 +31,7 @@ const LoginPage = ({ componentsObject }) => {
             data-button-login="applicationForm"
             onClick={manageComponents}
           >
-            User
+            Survey
           </button>
         </div>
       </div>
