@@ -1,7 +1,7 @@
 export const getCandidates = async () => {
   let resArray = [];
   try {
-    const res = await fetch("http://localhost:5000/candidates");
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/candidates`);
     resArray = await res.json();
   } catch (err) {
     console.error(err);
@@ -13,7 +13,7 @@ export const getCandidates = async () => {
 export const createCandidate = async (answers) => {
   let res = "";
   try {
-    res = await fetch("http://localhost:5000/new", {
+    res = await fetch(`${process.env.REACT_APP_API_URL}/candidates/new`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(answers),
@@ -28,7 +28,7 @@ export const createCandidate = async (answers) => {
 export const updateCandidate = async (id, data) => {
   let res = "";
   try {
-    res = await fetch(`http://localhost:5000/candidates/${id}`, {
+    res = await fetch(`${process.env.REACT_APP_API_URL}/candidates/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -42,7 +42,7 @@ export const updateCandidate = async (id, data) => {
 export const deleteCandidate = async (id) => {
   let res = "";
   try {
-    res = await fetch(`http://localhost:5000/candidates/${id}`, {
+    res = await fetch(`${process.env.REACT_APP_API_URL}/candidates/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     });
