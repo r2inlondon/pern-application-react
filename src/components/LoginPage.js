@@ -13,10 +13,7 @@ const LoginPage = ({ componentsObject }) => {
   return (
     <div className="login-page">
       <div className="login-box">
-        <p>
-          Click on user to start filling the form or Login to the admin
-          dashboard
-        </p>
+        <p>Click on any of the below options</p>
         <div className="login-buttons">
           <button
             className="the-button"
