@@ -25,6 +25,11 @@
     border: $black-line;
     padding-inline: 0.7rem;
   }
+  input[type="email"]:focus,
+  input[type="text"]:focus {
+    outline-color: black;
+    outline-style: solid;
+  }
 }
 
 .personal-email-input {

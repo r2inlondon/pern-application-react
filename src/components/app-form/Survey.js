@@ -48,6 +48,7 @@ const Survey = ({ answersObject, setStepsCompleted, handleComponents }) => {
             </div>
             <div className="select">
               <select
+                tabIndex={1}
                 id="select"
                 value={music}
                 onChange={(e) => setMusic(e.target.value)}
@@ -68,6 +69,7 @@ const Survey = ({ answersObject, setStepsCompleted, handleComponents }) => {
 
             <div className="select">
               <select
+                tabIndex={2}
                 id="select"
                 value={pet}
                 onChange={(e) => setPet(e.target.value)}
@@ -83,6 +85,7 @@ const Survey = ({ answersObject, setStepsCompleted, handleComponents }) => {
             </div>
             <div className="select">
               <select
+                tabIndex={3}
                 id="select"
                 value={food}
                 onChange={(e) => setFood(e.target.value)}
@@ -95,7 +98,12 @@ const Survey = ({ answersObject, setStepsCompleted, handleComponents }) => {
         </div>
 
         <div className="next">
-          <button className="the-button" data-next="summary" onClick={onSubmit}>
+          <button
+            tabIndex={4}
+            className="the-button"
+            data-next="summary"
+            onClick={onSubmit}
+          >
             Next
           </button>
         </div>

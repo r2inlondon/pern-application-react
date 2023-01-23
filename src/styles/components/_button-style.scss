@@ -10,6 +10,13 @@
   font-size: $font-size-regular;
   font-weight: bold;
   letter-spacing: 2px;
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    background-color: rgba(255, 255, 0, 0.712);
+    color: black;
+  }
 }
 
 .the-button:hover {

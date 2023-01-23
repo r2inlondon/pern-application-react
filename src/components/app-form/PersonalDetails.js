@@ -38,6 +38,7 @@ const PersonalDetails = ({
               <label>First Name</label>
 
               <input
+                tabIndex={1}
                 type="text"
                 required
                 id="firstName"
@@ -51,6 +52,7 @@ const PersonalDetails = ({
               <label>Last Name</label>
 
               <input
+                tabIndex={2}
                 type="text"
                 required
                 id="lastName"
@@ -64,6 +66,7 @@ const PersonalDetails = ({
             <p>Gender</p>
             <div className="radio">
               <input
+                tabIndex={3}
                 id="radio"
                 type="radio"
                 checked={gender === "Male"}
@@ -75,6 +78,7 @@ const PersonalDetails = ({
             </div>
             <div className="radio">
               <input
+                tabIndex={4}
                 id="radio-2"
                 type="radio"
                 checked={gender === "Female"}
@@ -88,6 +92,7 @@ const PersonalDetails = ({
 
           <label>Email</label>
           <input
+            tabIndex={5}
             type="email"
             required
             id="email"
