@@ -24,7 +24,7 @@ const LoginPage = ({ componentsObject }) => {
           </button>
 
           <button
-            className="the-button animate__animated animate__shakeX animate__delay-1s"
+            className="the-button animate__animated animate__shakeX animate__delay-2s"
             data-button-login="applicationForm"
             onClick={manageComponents}
           >
