@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import LoginPage from "./LoginPage";
 import ApplicationForm from "./app-form/ApplicationForm";
 import Dashboard from "./dashboard/Dashboard";
@@ -24,31 +24,32 @@ const Home = () => {
   };
 
   return (
-    <div className="home-bg">
-      <img
-        src={bgImage}
-        alt=""
-        onLoad={() => handleImageLoad()}
-        className="main-bg"
-      />
-
+    <Fragment>
       {isLoading && (
         <SplashScreenLoader setIsLoading={setIsLoading} anim={removeLoader} />
       )}
-      <div className="app-body">
-        <div className="bg-small">
-          {showComponent.login && (
-            <LoginPage componentsObject={componentsObject} />
-          )}
-          {showComponent.applicationForm && (
-            <ApplicationForm componentsObject={componentsObject} />
-          )}
-          {showComponent.dashboard && (
-            <Dashboard componentsObject={componentsObject} />
-          )}
+      <div className="home-bg" style={{ opacity: isLoading ? "0" : "1" }}>
+        <img
+          src={bgImage}
+          alt=""
+          onLoad={() => handleImageLoad()}
+          className="main-bg"
+        />
+        <div className="app-body">
+          <div className="bg-small">
+            {showComponent.login && (
+              <LoginPage componentsObject={componentsObject} />
+            )}
+            {showComponent.applicationForm && (
+              <ApplicationForm componentsObject={componentsObject} />
+            )}
+            {showComponent.dashboard && (
+              <Dashboard componentsObject={componentsObject} />
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
